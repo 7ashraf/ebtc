@@ -19,4 +19,17 @@ contract CollSurplusPoolHarness is CollSurplusPool {
     function call_isAuthorized(address user, uint32 functionSig) external view returns (bool) {
         return isAuthorized(user, bytes4(functionSig));
     }
+
+    function getContractBalance(address token) external returns (uint256){
+        uint256 balance = IERC20(token).balanceOf(address(this));
+        return balance;
+    }
+
+    function getFeeRecp() external returns(address){
+        return IActivePool(activePoolAddress).feeRecipientAddress();
+    }
+
+    function getFeeRecpNew() external returns(address){
+        return feeRecipientAddress;
+    }
 }

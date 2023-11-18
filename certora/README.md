@@ -125,3 +125,5 @@ git remote -v
 
 
 The forked repository will contain a `certora` directory that consists of 4 sub-directories - `harness`, `confs`, `mutations` and `specs`. These should contain the entire preliminary setup to allow you to start writing rules. Each sub-directory contains a different component of the verification project and may contain additional sub-directories to maintain organization. Try to keep a similar structure when adding new files.
+
+7ashraf
